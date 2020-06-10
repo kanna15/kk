@@ -13,10 +13,14 @@ public clas SingletonTest{
 
 class Renban{
 	private static Renban renban=new Renban();
+	private int number;
 	
-	private Renban(){
+	private Renban(){ 
+	  //
 	}
 	public static Renban getInstance(){
-	
+		return instance;
 	}
-}
+	public String getNumber(){
+	}
+｝
