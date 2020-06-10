@@ -1,0 +1,15 @@
+class Singleton {
+    private static Singleton singleton = new Singleton(); //クラス変数として唯一のインスタンスを保持
+    private Singleton() {} //newできなくする
+    public static Singleton getInstance() {return singleton;} //クラス変数に格納された唯一のインスタンスの参照を返す
+    public void greet() {System.out.println("hi");}
+}
+
+class Sample {
+    public static void main(String args[]) {
+        Singleton singleton = Singleton.getInstance();
+        singleton.greet();
+
+        System.out.println(singleton == Singleton.getInstance()); //参照先は同じ
+    }
+}
